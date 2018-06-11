@@ -1,0 +1,3 @@
+[submodule "Core.FE"]
+	path = Core.FE
+	url = https://tfs.emeint.net/tfs/DotNetCrossPlatform/mConnect/_git/Core.FE

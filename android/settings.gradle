@@ -1,0 +1,3 @@
+rootProject.name = 'mPlant'
+
+include ':app'

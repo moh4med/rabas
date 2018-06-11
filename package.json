@@ -1,0 +1,118 @@
+{
+  "name": "mPlant",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start --host 200.0.0.153 --port 9095",
+    "clean": "rm -rf lib",
+    "link": "node node_modules/react-native/local-cli/cli.js link",
+    "typings": "./node_modules/.bin/typings install",
+    "copyfiles": "copyfiles -u 1 ./src/**/* -e ./src/**/*.ts -e ./src/**/*.tsx ./lib",
+    "compile": "./node_modules/.bin/tsc",
+    "lint": "./node_modules/.bin/tslint -c tslint.json --project tsconfig.json",
+    "build": "npm run copyfiles && npm run compile",
+    "android": "node node_modules/react-native/local-cli/cli.js run-android ",
+    "app": " npm run help && npm run android && npm run build",
+    "test": "jest",
+    "help": "start http://mplant.emeint.com/help",
+    "release": "cd android && ./gradlew assembleRelease"
+  },
+  "dependencies": {
+    "@types/immutability-helper": "2.0.15",
+    "@types/lodash": "4.14.71",
+    "@types/moment": "2.13.0",
+    "@types/react": "15.0.37",
+    "@types/react-native-collapsible": "0.8.0",
+    "@types/react-native-datepicker": "1.4.2",
+    "@types/react-native-vector-icons": "4.2.1",
+    "@types/react-redux": "4.4.46",
+    "@types/redux-logger": "3.0.0",
+    "@types/redux-persist": "4.3.1",
+    "immutability-helper": "2.3.0",
+    "jest-preset-typescript-react-native": "1.2.0",
+    "lodash": "4.17.4",
+    "moment": "2.18.1",
+    "react": "16.0.0-alpha.12",
+    "react-native": "0.46.1",
+    "react-native-collapsible": "0.9.0",
+    "react-native-datepicker": "1.6.0",
+    "react-native-progress": "3.4.0",
+    "react-native-router-flux": "4.0.0-beta.14",
+    "react-native-simple-radio-button": "2.6.1",
+    "react-native-vector-icons": "4.2.0",
+    "react-redux": "5.0.5",
+    "redux": "3.7.2",
+    "redux-logger": "3.0.6",
+    "redux-persist": "4.8.3",
+    "redux-thunk": "2.2.0",
+    "react-navigation": "v1.0.0-beta.26"
+  },
+  "devDependencies": {
+    "@types/fetch-mock": "5.8.3",
+    "@types/jest": "19.2.4",
+    "@types/react-test-renderer": "15.5.1",
+    "babel-jest": "20.0.3",
+    "babel-preset-react-native": "2.1.0",
+    "copyfiles": "1.2.0",
+    "fetch-mock": "5.12.1",
+    "isomorphic-fetch": "2.2.1",
+    "jest": "19.0.0",
+    "jest-cli": "20.0.4",
+    "jest-react-native": "18.0.0",
+    "jest-resolve": "20.0.4",
+    "raf": "^3.4.0",
+    "react-test-renderer": "16.0.0-alpha.12",
+    "rimraf": "2.6.1",
+    "ts-jest": "19.0.14",
+    "tslint": "5.5.0",
+    "tslint-microsoft-contrib": "5.0.1",
+    "tslint-react": "3.0.0",
+    "typescript": "2.4.1",
+    "typings": "2.1.1"
+  },
+  "peerDependencies": {
+    "react": "0.12.0"
+  },
+  "rnpm": {
+    "assets": [
+      "./lib/app/assets"
+    ]
+  },
+  "jest": {
+    "bail": true,
+    "verbose": true,
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "js",
+      "es6"
+    ],
+    "transform": {
+      "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/(?!(jest-)?react-native|react-navigation)"
+    ],
+    "setupFiles": [
+      "<rootDir>/lib/__tests__/app/config/jest.js"
+    ],
+    "testMatch": [
+      "<rootDir>/lib/**/?(*.)(test).js"
+    ],
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/",
+      "<rootDir>/src/"
+    ],
+    "coverageDirectory": ".coverage",
+    "coverageReporters": [
+      "text-summary",
+      "html"
+    ],
+    "collectCoverageFrom": [
+      "<rootDir>/lib/__tests__/**/*.js",
+      "<rootDir>/lib/__tests__/**/*.spec.js",
+      "<rootDir>/lib/__tests__/**/*.index.js"
+    ],
+    "cacheDirectory": ".jest/cache"
+  }
+}

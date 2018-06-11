@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "react-native": "file:./typings/definitions/react-native.d.ts"
+    }
+}

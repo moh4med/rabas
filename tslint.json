@@ -1,0 +1,77 @@
+{
+    "defaultSeverity": "warn",
+    "extends": [
+        "tslint-microsoft-contrib",
+        "tslint:latest",
+        "tslint-react"
+    ],
+    "jsRules": {},
+    "rules": {
+        "max-func-body-length": false,
+        "no-shadowed-variable": false,
+        "no-relative-imports": false,
+        "no-default-export": true,
+        "no-reserved-keywords": false,
+        "no-console": [
+            false
+        ],
+        "jsx-alignment": false,
+        "jsx-boolean-value": true,
+        "jsx-curly-spacing": [
+            true,
+            "never"
+        ],
+        "no-var-requires": false,
+        "react-this-binding-issue": false,
+        "jsx-no-bind": true,
+        "jsx-no-lambda": false,
+        "jsx-no-multiline-js": false,
+        "jsx-no-string-ref": true,
+        "jsx-self-close": true,
+        "jsx-wrap-multiline": true,
+        "no-empty": false,
+        "no-empty-interface": false,
+        "max-line-length": [
+            false
+        ],
+        "ordered-imports": [
+            true
+        ],
+        "member-ordering": [
+            true
+        ],
+        "import-name": false,
+        "no-debugger": true,
+        "object-literal-sort-keys": [
+            true
+        ],
+        "trailing-comma": [
+            true,
+            {
+                "multiline": "never",
+                "singleline": "never"
+            }
+        ],
+        "export-name": false,
+        "no-require-imports": false,
+        "no-increment-decrement": false,
+        "missing-jsdoc": true,
+        "linebreak-style": [
+            "CRLF"
+        ],
+        "react-tsx-curly-spacing": [
+            true,
+            "never",
+            {
+                "allowMultiline": true
+            }
+        ],
+        "function-name": [
+            true,
+            {
+                "static-method-regex": "^[a-zA-Z_\\d]+$"
+            }
+        ]
+    },
+    "rulesDirectory": []
+}
